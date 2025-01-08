@@ -53,167 +53,26 @@ $faculty_members = $stmt->fetchAll();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trainee Management</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        .forwarded {
-            background-color: #fff3cd;
-        }
-        .action-form {
-            display: inline-block;
-            margin-right: 10px;
-        }
-         .action-header {
-            background-color: #4caf50;
-            color: white;
-        }
-
-        .details-btn {
-            background-color: #3f51b5;
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .details-btn:hover {
-            background-color: #303f9f;
-            transform: translateY(-2px);
-        }
-
-        .faculty-assign-form select {
-            padding: 8px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            margin-right: 8px;
-            min-width: 200px;
-            background-color: white;
-            margin-bottom: 4px;
-        }
-
-        .faculty-assign-form button {
-            background-color: #4caf50;
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .faculty-assign-form button:hover {
-            background-color: #45a049;
-            transform: translateY(-2px);
-        }
-
-        .details-dropdown {
-            display: none;
-            background-color: #f8f9fa;
-            padding: 15px;
-            border: 1px solid #e9ecef;
-            border-radius: 4px;
-            margin: 10px 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .details-dropdown.active {
-            display: table-row;
-        }
-
-        .details-content {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            padding: 10px;
-        }
-
-        .details-item {
-            display: flex;
-            align-items: center;
-            padding: 8px;
-            background-color: white;
-            border-radius: 4px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-        }
-
-        .details-item strong {
-            margin-right: 8px;
-            color: #3f51b5;
-            min-width: 120px;
-        }
-
-        .table-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 0;
-            margin-top: 10px;
-            border-top: 1px solid #ddd;
-        }
-
-        .table-info {
-            font-size: 14px;
-            color: #555;
-        }
-
-        .pagination {
-            display: flex;
-            gap: 5px;
-        }
-
-        .page-nav, .page-number {
-            background-color: #f4f4f4;
-            border: 1px solid #ddd;
-            padding: 5px 10px;
-            cursor: pointer;
-            border-radius: 3px;
-        }
-
-        .page-nav:hover, .page-number:hover {
-            background-color: #ddd;
-        }
-
-        .page-number.active {
-            background-color: #4caf50;
-            color: white;
-            border: 1px solid #4caf50;
-        }
-
-        .delete-btn {
-            background-color: #f44336;
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin-top: 8px;
-        }
-
-        .delete-btn:hover {
-            background-color: #d32f2f;
-            transform: translateY(-2px);
-        }
-        .forwarded {
-            background-color: #fff3cd;
-        }
-        .action-form {
-            display: inline-block;
-            margin-right: 10px;
-        }
-    </style>
 </head>
 <body>
+<header>
+<div class="navbar">
+<img src="../logo.jpeg" id="logo" alt="drdo logo" />
+<div class="brand">ठोस राज्य भौतिकी प्रयोगशाला मानव संसाधन प्रबंधन
+/ Solid State Physics Laboratory Human Resource Management</div>
+</div>
+</header>
     <div class="dashboard-container">
         <aside class="sidebar">
             <h2>HR Dashboard</h2>
             <nav>
                 <ul>
-                    <li><a href="hr_dashboard.php">Overview</a></li>
+                    <li><a href="dashboard.php" >Overview</a></li>
                     <li><a href="add_trainee.php">Add New Trainee</a></li>
-                    <li><a href="no_access_code_users.php">Users without Access Code</a></li>
+                    <li><a href="unsigned_users.php" >Unsigned Users</a></li>
                     <li><a href="trainee_management.php" class="active">Trainee Management</a></li>
-                    <li><a href="hr_trainee_reviews.php">Trainee Reviews</a></li>
+                    <li><a href="trainee_reviews.php">Trainee Reviews</a></li>
+                    <li><a href="messages.php">Messages</a></li>
                 </ul>
             </nav>
             <a href="../logout.php" class="logout">Logout</a>
@@ -281,7 +140,7 @@ $faculty_members = $stmt->fetchAll();
                                                 </option>
                                             <?php endforeach; ?>
                                         </select>
-                                        <button type="submit" name="assign_faculty">Reassign Faculty</button>
+                                        <button type="submit" class="universal" name="assign_faculty">Reassign Faculty</button>
                                     </form>
                                 <?php elseif ($trainee['status'] == 'rejected'): ?>
                                     <p>Rejected</p>
@@ -298,13 +157,13 @@ $faculty_members = $stmt->fetchAll();
                                                     </option>
                                                 <?php endforeach; ?>
                                             </select>
-                                            <button type="submit" name="assign_faculty">Assign Faculty</button>
+                                            <button type="submit" class="universal" name="assign_faculty">Assign Faculty</button>
                                         </form>
                                     <?php endif; ?>
                                     <?php if ($trainee['project_completed'] && !$trainee['certificate_issued']): ?>
                                         <form method="POST">
                                             <input type="hidden" name="trainee_id" value="<?php echo $trainee['id']; ?>">
-                                            <button type="submit" name="issue_certificate">Issue Certificate</button>
+                                            <button type="submit" class="universal" name="issue_certificate">Issue Certificate</button>
                                         </form>
                                     <?php endif; ?>
                                 <?php endif; ?>

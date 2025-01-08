@@ -246,8 +246,6 @@ h1 {
 
 .container {
     max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
 }
 
 /* Typography */
@@ -720,4 +718,71 @@ td {
     .download-excel-btn {
         width: 100%;
     }
+}
+
+/*Login/Signup form*/
+ .login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.role-selector {
+    margin-bottom: 20px;
+    text-align: center;
+}
+.role-selector a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #f0f0f0;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.role-selector a.active {
+    background-color: #3498db;
+    color: #fff;
+}
+.login-form input[type="text"],
+.login-form input[type="password"],
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.login-form button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.login-form button:hover {
+    background-color: #2980b9;
+}
+.error-message {
+    color: #e74c3c;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.navbar {
+    background-image: linear-gradient(to left, #ffffff, #97d6fa);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: static;
+    width:100%;
+    font-weight: 600;
+}
+
+#logo{
+    width: 100px;
+    margin-right: 10px;
 }

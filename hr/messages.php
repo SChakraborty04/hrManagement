@@ -44,16 +44,24 @@ if ($chat_with) {
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<header>
+<div class="navbar">
+<img src="../logo.jpeg" id="logo" alt="drdo logo" />
+<div class="brand">ठोस राज्य भौतिकी प्रयोगशाला मानव संसाधन प्रबंधन
+/ Solid State Physics Laboratory Human Resource Management</div>
+</div>
+</header>
     <div class="dashboard-container">
         <aside class="sidebar">
             <h2>HR Dashboard</h2>
             <nav>
                 <ul>
-                    <li><a href="hr_dashboard.php">Overview</a></li>
+                    <li><a href="dashboard.php" >Overview</a></li>
                     <li><a href="add_trainee.php">Add New Trainee</a></li>
-                    <li><a href="no_access_code_users.php">Users without Access Code</a></li>
+                    <li><a href="unsigned_users.php" >Unsigned Users</a></li>
                     <li><a href="trainee_management.php">Trainee Management</a></li>
-                    <li><a href="chat.php" class="active">Messages</a></li>
+                    <li><a href="trainee_reviews.php">Trainee Reviews</a></li>
+                    <li><a href="messages.php" class="active">Messages</a></li>
                 </ul>
             </nav>
             <a href="../logout.php" class="logout">Logout</a>

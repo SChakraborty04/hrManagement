@@ -49,8 +49,7 @@ foreach ($rows as $row) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faculty Dashboard</title>
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="faculty_dashboard.css">
+    <link rel="stylesheet" href="style.css">
     <style>
     .review-history {
         background-color: #f9f9f9; /* Light gray background */
@@ -81,16 +80,21 @@ foreach ($rows as $row) {
     </style>
 </head>
 <body>
+<header>
+<div class="navbar">
+<img src="../logo.jpeg" id="logo" alt="drdo logo" />
+<div class="brand">ठोस राज्य भौतिकी प्रयोगशाला मानव संसाधन प्रबंधन
+/ Solid State Physics Laboratory Human Resource Management</div>
+</div>
+</header>
     <div class="dashboard-container">
         <aside class="sidebar">
             <h2>Faculty Dashboard</h2>
             <nav>
                 <ul>
-                    <li><a href="faculty_dashboard.php">Assigned Trainees</a></li>
+                    <li><a href="dashboard.php">Assigned Trainees</a></li>
                     <li><a href="review.php" class="active">Review Trainees</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Messages</a></li>
-                    <li><a href="#">Profile</a></li>
+                    <li><a href="messages.php">Messages</a></li>
                 </ul>
             </nav>
             <a href="../logout.php" class="logout">Logout</a>

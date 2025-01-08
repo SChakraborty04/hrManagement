@@ -22,8 +22,8 @@ body {
 /* Sidebar styles */
 .sidebar {
     width: 250px;
-    background-color: #1a237e;
-    color: #ffffff;
+    background-color: #97d6fa;
+    color: #4f4f4f;
     padding: 20px;
     position: fixed;
     height: 100vh;
@@ -34,7 +34,7 @@ body {
     font-size: 1.5rem;
     margin-bottom: 20px;
     text-align: center;
-    color: #fff;
+    color: #4f4f4f;
 }
 
 .sidebar nav ul {
@@ -46,7 +46,7 @@ body {
 }
 
 .sidebar nav ul li a {
-    color: #ffffff;
+    color: #4f4f4f;
     text-decoration: none;
     display: block;
     padding: 10px;
@@ -56,13 +56,13 @@ body {
 
 .sidebar nav ul li a:hover,
 .sidebar nav ul li a.active {
-    background-color: #3949ab;
+    background-color: #ffffff;
 }
 
 .logout {
     display: block;
     margin-top: 20px;
-    color: #ff8a65;
+    color: #ff5722;
     text-decoration: none;
     text-align: center;
     padding: 10px;
@@ -80,6 +80,7 @@ body {
     flex: 1;
     padding: 20px;
     margin-left: 250px;
+    margin-top:75px;
 }
 
 h1 {
@@ -488,4 +489,332 @@ h1 {
     .chat-area {
         height: calc(100vh - 300px);
     }
+    .navbar{
+        width: 100%;
+        height: auto;
+        position: static;
+    }
+}
+
+.navbar {
+    background-image: linear-gradient(to left, #ffffff, #97d6fa);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width:100%;
+    margin-left:250px;
+    padding-right: 250px;
+    font-weight: 600;
+}
+
+#logo{
+    width: 100px;
+    margin-right: 10px;
+}
+/*Trainee management*/
+ .forwarded {
+    background-color: #fff3cd;
+}
+.action-form {
+    display: inline-block;
+    margin-right: 10px;
+}
+    .action-header {
+    background-color: #4caf50;
+    color: white;
+}
+
+.details-btn {
+    background-color: #3f51b5;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.details-btn:hover {
+    background-color: #303f9f;
+    transform: translateY(-2px);
+}
+
+.faculty-assign-form select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 8px;
+    min-width: 200px;
+    background-color: white;
+    margin-bottom: 4px;
+}
+
+.faculty-assign-form button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.faculty-assign-form button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+.details-dropdown {
+    display: none;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    margin: 10px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.details-dropdown.active {
+    display: table-row;
+}
+
+.details-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 10px;
+}
+
+.details-item {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.details-item strong {
+    margin-right: 8px;
+    color: #3f51b5;
+    min-width: 120px;
+}
+
+.table-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    margin-top: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.table-info {
+    font-size: 14px;
+    color: #555;
+}
+
+.pagination {
+    display: flex;
+    gap: 5px;
+}
+
+.page-nav, .page-number {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.page-nav:hover, .page-number:hover {
+    background-color: #ddd;
+}
+
+.page-number.active {
+    background-color: #4caf50;
+    color: white;
+    border: 1px solid #4caf50;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 8px;
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f;
+    transform: translateY(-2px);
+}
+.universal {
+    background-color: #01850e;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 8px;
+}
+
+.universal:hover {
+    background-color: #01630b;
+    transform: translateY(-2px);
+}
+.forwarded {
+    background-color: #fff3cd;
+}
+.action-form {
+    display: inline-block;
+    margin-right: 10px;
+}
+/*Trainee reviews*/
+    /* Modal Background */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000; /* Ensure it's above everything */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scrolling if needed */
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto; /* 10% from the top, centered horizontally */
+    padding: 20px;
+    border-radius: 8px;
+    width: 50%; /* Adjust width as needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: slideDown 0.3s ease-out;
+}
+
+/* Heading */
+.modal-content h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+}
+
+/* Modal Details */
+#reviewDetails p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Close Button */
+.close-modal {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff; /* Blue button */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.close-modal:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Animations */
+@keyframes slideDown {
+    from {
+        transform: translateY(-20%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+/* View Review Button */
+.view-review-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #28a745; /* Green button */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover Effect */
+.view-review-btn:hover {
+    background-color: #218838; /* Darker green */
+    transform: translateY(-2px); /* Slight lift */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Focus Effect */
+.view-review-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.5); /* Green focus ring */
+}
+
+/* Disabled State */
+.view-review-btn:disabled {
+    background-color: #6c757d; /* Gray button */
+    cursor: not-allowed;
+    box-shadow: none;
+}
+/*Unsigned users*/
+.table-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    margin-top: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.table-info {
+    font-size: 14px;
+    color: #555;
+}
+
+.pagination {
+    display: flex;
+    gap: 5px;
+}
+
+.page-nav, .page-number {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.page-nav:hover, .page-number:hover {
+    background-color: #ddd;
+}
+
+.page-number.active {
+    background-color: #4caf50;
+    color: white;
+    border: 1px solid #4caf50;
 }

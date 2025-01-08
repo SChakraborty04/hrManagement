@@ -35,10 +35,16 @@ if (isset($_GET['registration']) && $_GET['registration'] === 'success') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trainee Dashboard</title>
-    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<header>
+<div class="navbar">
+<img src="../logo.jpeg" id="logo" alt="drdo logo" />
+<div class="brand">ठोस राज्य भौतिकी प्रयोगशाला मानव संसाधन प्रबंधन
+/ Solid State Physics Laboratory Human Resource Management</div>
+</div>
+</header>
     <div class="dashboard-container">
         <aside class="sidebar">
             <h2>Trainee Dashboard</h2>

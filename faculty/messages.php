@@ -45,20 +45,24 @@ if ($chat_with) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faculty Chat</title>
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="faculty_dashboard.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<header>
+<div class="navbar">
+<img src="../logo.jpeg" id="logo" alt="drdo logo" />
+<div class="brand">ठोस राज्य भौतिकी प्रयोगशाला मानव संसाधन प्रबंधन
+/ Solid State Physics Laboratory Human Resource Management</div>
+</div>
+</header>
     <div class="dashboard-container">
         <aside class="sidebar">
             <h2>Faculty Dashboard</h2>
             <nav>
                 <ul>
-                    <li><a href="faculty_dashboard.php">Assigned Trainees</a></li>
+                    <li><a href="dashboard.php">Assigned Trainees</a></li>
                     <li><a href="review.php" >Review Trainees</a></li>
-                    <li><a href="#">Projects</a></li>
                     <li><a href="messages.php" class="active">Messages</a></li>
-                    <li><a href="#">Profile</a></li>
                 </ul>
             </nav>
             <a href="../logout.php" class="logout">Logout</a>
